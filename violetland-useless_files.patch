@@ -1,11 +1,11 @@
---- violetland-v0.2.1/CMakeLists.txt~	2009-10-26 10:36:58.000000000 +0100
-+++ violetland-v0.2.1/CMakeLists.txt	2009-11-05 12:43:43.000000000 +0100
-@@ -51,8 +51,6 @@
+--- violetland-v0.2.2/CMakeLists.txt~	2009-11-04 18:33:44.000000000 +0100
++++ violetland-v0.2.2/CMakeLists.txt	2009-11-06 11:33:32.000000000 +0100
+@@ -64,8 +64,6 @@
  install(TARGETS violetland DESTINATION bin)
  install(FILES
  	weapons
 -	README_EN.TXT
 -	README_RU.TXT
+ 	icon-dark.png
+ 	icon-light.png
  DESTINATION ${relResPath})
- install(FILES fonts/harabara.ttf DESTINATION ${relResPath}/fonts)
- install(FILES
