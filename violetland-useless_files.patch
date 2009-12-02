@@ -1,6 +1,6 @@
---- violetland-v0.2.2/CMakeLists.txt~	2009-11-04 18:33:44.000000000 +0100
-+++ violetland-v0.2.2/CMakeLists.txt	2009-11-19 15:56:53.000000000 +0100
-@@ -64,8 +64,6 @@
+--- violetland-v0.2.4/CMakeLists.txt~	2009-11-26 22:22:44.000000000 +0000
++++ violetland-v0.2.4/CMakeLists.txt	2009-12-02 12:41:40.617840262 +0000
+@@ -72,8 +72,6 @@
  install(TARGETS violetland DESTINATION bin)
  install(FILES
  	weapons
