@@ -13,6 +13,7 @@ BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	cmake
+BuildRequires:	dos2unix
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,6 +34,7 @@ posiada również unikalną cechę: dynamiczne zmiany dnia i nocy.
 
 %prep
 %setup -q -n %{name}-v%{version}
+dos2unix CMakeLists.txt
 %patch0 -p1
 
 %build
