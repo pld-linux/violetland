@@ -1,12 +1,12 @@
 Summary:	Opensource crossplatform game similar to crimsonland
 Summary(pl.UTF-8):	Otwarta gra wieloplatformowa podobna do crimsonland
 Name:		violetland
-Version:	0.2.4
+Version:	0.2.8
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://violetland.googlecode.com/files/%{name}-v%{version}-src.zip
-# Source0-md5:	b33d61afd2e28b29127cdaff23c06b48
+# Source0-md5:	d75c4028c0803c9603b06a7e2a1457fd
 Patch0:		%{name}-useless_files.patch
 URL:		http://code.google.com/p/violetland/
 BuildRequires:	SDL_image-devel
