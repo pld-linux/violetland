@@ -9,11 +9,13 @@ Source0:	http://violetland.googlecode.com/files/%{name}-v%{version}-src.zip
 # Source0-md5:	d75c4028c0803c9603b06a7e2a1457fd
 Patch0:		%{name}-useless_files.patch
 URL:		http://code.google.com/p/violetland/
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	cmake
 BuildRequires:	dos2unix
+BuildRequires:	libstdc++-devel
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
