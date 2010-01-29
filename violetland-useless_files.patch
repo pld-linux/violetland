@@ -1,11 +1,11 @@
---- violetland-v0.2.4/CMakeLists.txt~	2009-11-26 22:22:44.000000000 +0000
-+++ violetland-v0.2.4/CMakeLists.txt	2009-12-02 12:41:40.617840262 +0000
-@@ -72,8 +72,6 @@
+--- violetland-v0.2.8/CMakeLists.txt~	2010-01-26 22:39:50.000000000 +0100
++++ violetland-v0.2.8/CMakeLists.txt	2010-01-29 14:13:41.646755584 +0100
+@@ -81,8 +81,6 @@
+ 
  install(TARGETS violetland DESTINATION bin)
  install(FILES
- 	weapons
 -	README_EN.TXT
 -	README_RU.TXT
- 	icon-dark.png
  	icon-light.png
  DESTINATION ${relResPath})
+ install(DIRECTORY
