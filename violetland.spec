@@ -1,12 +1,12 @@
 Summary:	Opensource crossplatform game similar to crimsonland
 Summary(pl.UTF-8):	Otwarta gra wieloplatformowa podobna do crimsonland
 Name:		violetland
-Version:	0.2.8
+Version:	0.2.9
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://violetland.googlecode.com/files/%{name}-v%{version}-src.zip
-# Source0-md5:	d75c4028c0803c9603b06a7e2a1457fd
+# Source0-md5:	03487b039208a5c87a0558543c723e71
 Patch0:		%{name}-useless_files.patch
 URL:		http://code.google.com/p/violetland/
 BuildRequires:	OpenGL-GLU-devel
@@ -14,8 +14,9 @@ BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	cmake
-BuildRequires:	dos2unix
 BuildRequires:	libstdc++-devel
+BuildRequires:	rpmbuild(macros) >= 1.533
+BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +37,7 @@ posiada również unikalną cechę: dynamiczne zmiany dnia i nocy.
 
 %prep
 %setup -q -n %{name}-v%{version}
-dos2unix CMakeLists.txt
+%undos CMakeLists.txt
 %patch0 -p1
 
 %build
