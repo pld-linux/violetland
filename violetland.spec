@@ -1,12 +1,12 @@
 Summary:	Opensource crossplatform game similar to crimsonland
 Summary(pl.UTF-8):	Otwarta gra wieloplatformowa podobna do crimsonland
 Name:		violetland
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://violetland.googlecode.com/files/%{name}-v%{version}-src.zip
-# Source0-md5:	b8adc278502dcc5e706b530c42970fce
+# Source0-md5:	77756995a1bc6d6e15bf4b0c3a33a0eb
 Patch0:		%{name}-useless_files.patch
 URL:		http://code.google.com/p/violetland/
 BuildRequires:	OpenGL-GLU-devel
@@ -15,7 +15,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	cmake
 BuildRequires:	libstdc++-devel
-BuildRequires:	rpmbuild(macros) >= 1.533
+BuildRequires:	rpmbuild(macros) >= 1.577
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,9 +30,9 @@ feature: dynamic change of day and night.
 
 %description -l pl.UTF-8
 W grze zadaniem gracza jest pomoc dziewczynie o imieniu Violet w walce
-z hordą potworów. Do tego celu posłuży nam róznego rodzaju broń,
+z hordą potworów. Do tego celu posłuży nam różnego rodzaju broń,
 specjalne właściwości heroiny oraz doświadczenie. W grze występują
-elementy RPG w formie siła-zręczność-witalnośc oraz pochodne. Gra
+elementy RPG w formie siła-zręczność-witalność oraz pochodne. Gra
 posiada również unikalną cechę: dynamiczne zmiany dnia i nocy.
 
 %prep
@@ -43,12 +43,7 @@ posiada również unikalną cechę: dynamiczne zmiany dnia i nocy.
 %build
 install -d build
 cd build
-%cmake .. \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64
-%endif
+%cmake ..
 
 %install
 rm -rf $RPM_BUILD_ROOT
