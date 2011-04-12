@@ -1,12 +1,12 @@
 Summary:	Opensource crossplatform game similar to crimsonland
 Summary(pl.UTF-8):	Otwarta gra wieloplatformowa podobna do crimsonland
 Name:		violetland
-Version:	0.3.1
+Version:	0.3.2
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://violetland.googlecode.com/files/%{name}-v%{version}-src.zip
-# Source0-md5:	77756995a1bc6d6e15bf4b0c3a33a0eb
+# Source0-md5:	2190b7ee88cc320dcc570548828a67e2
 Patch0:		%{name}-useless_files.patch
 URL:		http://code.google.com/p/violetland/
 BuildRequires:	OpenGL-GLU-devel
@@ -15,7 +15,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	cmake
 BuildRequires:	libstdc++-devel
-BuildRequires:	rpmbuild(macros) >= 1.577
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
